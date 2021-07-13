@@ -9,19 +9,21 @@
   <title>SohanurRahman</title>
   <link rel="icon" href="assets/img/favicon.ico" type="image/ico">
   <link rel="stylesheet" href="assets/css/color.css">
+  <link rel="stylesheet" href="assets/css/skillbtnb.css">
+  <!-- <link rel="stylesheet" href="assets/css/skillbtnd.css"> -->
   <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono|Inconsolata" rel="stylesheet">
   <link href="https://cdn.materialdesignicons.com/2.0.46/css/materialdesignicons.min.css" rel="stylesheet">
 </head>
 <body>
 
 <!--Switcher-->
-  <div class="style-switcher">
+  <!-- <div class="style-switcher">
     <span class="style-switcher__control"></span>
     <div class="style-switcher__list">
-      <a class="style-switcher__link style-switcher__link--color"></a>
-      <a class="style-switcher__link style-switcher__link--mono"></a>
+      <a class="style-switcher__link style-switcher__link--color style-switcher__link--d"></a>
+      <a class="style-switcher__link style-switcher__link--mono style-switcher__link--b"></a>
     </div>
-  </div>
+  </div> -->
 <!--Switcher-->
 
 <!--Main menu-->
@@ -33,6 +35,7 @@
             <ul>
               <li><a href="#hello">Hello</a></li>
               <li><a href="#resume">Resume</a></li>
+              <li><a href="#skills">Skills</a></li>
               <li><a href="#portfolio">Portfolio</a></li>
               <li><a href="#testimonials">testimonials</a></li>
               <li><a href="#blog">blog</a></li>
@@ -60,6 +63,7 @@
         <ul>
           <li><a href="#hello">Hello</a></li>
           <li><a href="#resume">Resume</a></li>
+          <li><a href="#skills">Skills</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#testimonials">testimonials</a></li>
           <li><a href="#blog">blog</a></li>
@@ -83,7 +87,7 @@
           <div class="personal-profile__contacts">
             <dl class="contact-list contact-list__opacity-titles">
               <dt>Age:</dt>
-              <dd>25</dd>
+              <dd>25y</dd>
               <dt>Phone:</dt>
               <dd><a href="tel:+8801737553058">+88 017 3755 3058</a></dd>
               <dt>Email:</dt>
@@ -191,11 +195,24 @@
         </div>
       </div>
     </div>
-    <div class="row section__resume progress-list js-progress-list">
-      <div class="col-md-12">
+    <!-- <div class="row section__resume progress-list js-progress-list">
+      <!-- <div class="col-md-12">
         <h3 class="progress-list__title">general skills</h3>
-      </div>
-      <div class="col-md-5 mr-auto">
+      </div> -->
+      <!-- <div class="col-md-12 mr-auto">
+        <button class="btn btn-dark btn-lg px-5 py-3 m-2">Excel</button>
+        <button class="btn btn-dark btn-lg px-5 py-3 m-2">Microsoft PowerBi</button>
+        <button class="btn btn-dark btn-lg px-5 py-3 m-2">SQL ( MySQL,PostgreSQL )</button>
+        <button class="btn btn-dark btn-lg px-5 py-3 m-2">Python</button>
+        <button class="btn btn-dark btn-lg px-5 py-3 m-2">NumPy</button>
+        <button class="btn btn-dark btn-lg px-5 py-3 m-2">Pandas</button>
+        <button class="btn btn-dark btn-lg px-5 py-3 m-2">MatPlotlib</button>
+        <button class="btn btn-dark btn-lg px-5 py-3 m-2">Seaborn</button>
+        <button class="btn btn-dark btn-lg px-5 py-3 m-2">ScikitLearn (P)</button>
+        <button class="btn btn-dark btn-lg px-5 py-3 m-2">ScikitImage (P)</button>
+        <button class="btn btn-dark btn-lg px-5 py-3 m-2">Tablaue (P)</button>
+      </div> -->
+      <!-- <div class="col-md-5 mr-auto">
         <div class="progress-list__skill">
           <p>
             <span class="progress-list__skill-title">html5</span>
@@ -236,8 +253,8 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-5 mr-auto">
+      </div> -->
+      <!-- <div class="col-md-5 mr-auto">
         <div class="progress-list__skill">
           <p>
             <span class="progress-list__skill-title">bootstrap 3</span>
@@ -278,10 +295,35 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </div> 
+    </div>  -->
   </section>
 <!--Resume-->
+<!-- Skills -->
+<section id="skills" class="container section">
+  <div class="row progress-list">
+    <div class="col-md-10">
+      <h2 id="skill_header" class="section__title">Skills_</h2>
+    </div>
+    <div class="col-md-12">
+      <h3 class="progress-list__title">general skills</h3>
+    </div>
+    <div class="col-md-12 mr-auto">
+      <button class="skillbtn btn">Excel</button>
+      <button class="skillbtn btn">Microsoft PowerBi</button>
+      <button class="skillbtn btn">SQL ( MySQL,PostgreSQL )</button>
+      <button class="skillbtn btn">Python</button>
+      <button class="skillbtn btn">NumPy</button>
+      <button class="skillbtn btn">Pandas</button>
+      <button class="skillbtn btn">MatPlotlib</button>
+      <button class="skillbtn btn">Seaborn</button>
+      <button class="skillbtn btn">ScikitLearn (P)</button>
+      <button class="skillbtn btn">ScikitImage (P)</button>
+      <button class="skillbtn btn">Tablaue (P)</button>
+    </div>
+  </div>
+</section>
+<!-- endSkills -->
 
 <!--Portfolio-->
   <section id="portfolio" class="container section">
@@ -528,28 +570,38 @@
         </div>
       </div>
       <div class="row contacts">
-        <div class="col-md-5 col-lg-4">
+        <div class="col-md-7 col-lg-5">
           <div class="contacts__list">
             <dl class="contact-list">
               <dt>Phone:</dt>
-              <dd><a href="tel:82344563333">8 (234) 456-33-33</a></dd>
+              <dd><a href="tel:+8801737553058">+88 017 3755 3058</a></dd>
               <dt>Skype:</dt>
-              <dd><a href="skype:iamivanovivan">iamivanovivan</a></dd>
+              <dd><a href="skype:sohanur064">sohanur064</a></dd>
               <dt>Email:</dt>
-              <dd><a href="mailto:mail@mail.com">mail@mail.com</a></dd>
+              <dd><a href="mailto:sohanur.math@gmail.com">sohanur.math@gmail.com</a></dd>
+              <dt>Address:</dt>
+              <dd><a href="#">Mirpur, Dhaka, Bangladesh.</a></dd>
             </dl>
           </div>
-          <div class="contacts__social">
+          <!-- <div class="contacts__social">
             <ul>
               <li><a href="">Facebook</a></li>
               <li><a href="">Linkedin</a></li>
               <li><a href="">GitHub</a></li>
               <li><a href="">Bitbucket</a></li>
             </ul>
-          </div>
+          </div> -->
         </div>
-        <div class="col-md-7 col-lg-5">
-          <div class="contacts__form">
+        <div class="col-md-5 col-lg-4">
+          <div class="contacts__social">
+            <ul>
+              <li><a href="https://www.facebook.com/sohanurss"><i class="fa fa-facebook-square px-2"></i>Facebook</a></li>
+              <li><a href="https://www.linkedin.com/in/thesohanur/"><i class="fa fa-linkedin-square px-2"></i>Linkedin</a></li>
+              <li><a href="https://github.com/theSohanur"><i class="fa fa-github px-2"></i>GitHub</a></li>
+              <!-- <li><a href=""></a></li> -->
+            </ul>
+          </div>
+          <!-- <div class="contacts__form">
             <p class="contacts__form-title">Or just write me a letter here_</p>
             <form class="js-form">
               <div class="form-group">
@@ -569,9 +621,9 @@
               </div>
               <button class="site-btn site-btn--form" type="submit" value="Send">Send</button>
             </form>
-          </div>
+          </div> -->
           <div class="footer">
-            <p>© 2016 Ivan Susanin. All Rights Reserved</p>
+            <p>© 2021 Sohanur Rahman. All Rights Reserved</p>
           </div>
         </div>
       </div>

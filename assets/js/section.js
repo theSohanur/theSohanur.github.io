@@ -46,6 +46,7 @@ var animateHeaders = function(headers) {
 var animatedHeaders = animateHeaders({
     "#hello_header": '90%',
     "#resume_header": '70%',
+    "#skill_header": '70%',
     "#portfolio_header": '70%',
     "#testimonials_header": '70%',
     "#blog_header": '70%',

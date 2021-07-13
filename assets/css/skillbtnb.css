@@ -1,0 +1,13 @@
+.skillbtn{
+    color: #6D56C1 !important;   
+    background-color: transparent;
+    border-color: #6D56C1 !important;
+    border-radius: 0rem !important;
+    padding: 1.1rem 3rem ;
+    margin: 0.6rem;
+    font-size: 1.3rem;
+}
+.skillbtn:hover{
+    color: #fff !important;   
+    background-color: #6D56C1 !important;
+}
