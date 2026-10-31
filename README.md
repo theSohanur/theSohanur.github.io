@@ -96,6 +96,28 @@ artwork renders at the same size. Point the project's `"image"` at the new file.
 Accent colour is `#6D56C1`. Type is Roboto, Roboto Mono and Inconsolata from
 Google Fonts, with Font Awesome and Material Design Icons for the icons.
 
+## Light and dark
+
+A new visitor gets whatever their operating system is set to; the moon/sun
+button in the top bar overrides that and the choice is remembered. The theme is
+set by an inline script in `<head>`, before the stylesheet paints, so dark-mode
+visitors never see a white flash.
+
+`color.css` is a compiled file with its colours baked in, so dark mode is not a
+rewrite of it: `skillbtnb.css` names the palette once as custom properties under
+`:root` and `[data-theme="dark"]`, and re-states the surfaces that actually
+show. **To change a colour, edit the property, not the rules.**
+
+Two things worth knowing if you touch this:
+
+- The project illustrations are light artwork, so in dark mode they are flipped
+  with `invert(1) hue-rotate(180deg)` — the inversion handles the lightness and
+  the rotation puts the purples back. `--c-panel` is set to the colour the
+  drawing's own `#F5F2FC` background becomes after that filter, which is what
+  stops a visible rectangle appearing around it.
+- Muted text runs through `--c-muted` in both themes rather than the template's
+  `#999`, which fails contrast on white.
+
 ## Gotchas worth knowing
 
 - **Open it over http, not from disk.** The page fetches `site.json`, and

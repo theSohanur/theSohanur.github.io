@@ -123,7 +123,7 @@ ul.skill-tags li:hover {
     letter-spacing: 5px;
     text-transform: uppercase;
     font-weight: 700;
-    color: #999;
+    color: var(--c-muted);
     margin-bottom: 25px;
 }
 .practice-item {
@@ -446,4 +446,258 @@ ul.edu-subjects li {
         text-decoration: underline;
         outline: none;
     }
+}
+
+
+/* =========================================================
+   DARK MODE
+   color.css is a compiled file with the colours baked in, so
+   rather than rewrite it, every surface the page actually
+   shows is re-stated here under [data-theme="dark"]. The
+   values are named once as custom properties and used below,
+   so changing the palette is a change in one place.
+   ========================================================= */
+:root {
+    --c-bg: #ffffff;
+    --c-text: #555555;
+    --c-text-soft: #5f5a6b;
+    --c-muted: #74707f;
+    --c-accent: #6d56c1;
+    --c-rule: #f1f1f1;
+    --c-rule-soft: #ededf3;
+    --c-chip: #f5f4fa;
+    --c-chip-strong: #f1eefb;
+    --c-surface: #ffffff;
+    --c-panel: #f5f2fc;
+}
+
+[data-theme="dark"] {
+    --c-bg: #141220;
+    --c-text: #c7c3d4;
+    --c-text-soft: #a7a2b9;
+    --c-muted: #8d87a1;
+    --c-accent: #a594ec;          /* lifted: #6d56c1 is unreadable on dark */
+    --c-rule: #2a2637;
+    --c-rule-soft: #272233;
+    --c-chip: #231f31;
+    --c-chip-strong: #2a2342;
+    --c-surface: #1c1829;
+    /* Matches what the illustration's own #F5F2FC background becomes once the
+       invert filter below runs, so the drawing has no visible edge. */
+    --c-panel: #0c0a12;
+}
+
+[data-theme="dark"] body {
+    background-color: var(--c-bg);
+    color: var(--c-text);
+}
+[data-theme="dark"] hr {
+    border-top-color: rgba(255, 255, 255, 0.08);
+}
+[data-theme="dark"] a {
+    color: var(--c-accent);
+}
+[data-theme="dark"] a:focus,
+[data-theme="dark"] a:hover {
+    color: var(--c-accent);
+}
+
+/* Section headings and body copy */
+[data-theme="dark"] .section .section__title,
+[data-theme="dark"] .section__description,
+[data-theme="dark"] .project-card__title,
+[data-theme="dark"] .project-card__description,
+[data-theme="dark"] .project-card__stack,
+[data-theme="dark"] .job__role-title,
+[data-theme="dark"] .practice-item__title {
+    color: var(--c-text);
+}
+[data-theme="dark"] .job__role-text {
+    color: var(--c-text-soft);
+}
+[data-theme="dark"] .resume-list_title,
+[data-theme="dark"] .resume-list__block-date,
+[data-theme="dark"] .skill-group__label,
+[data-theme="dark"] .practice-item__description,
+[data-theme="dark"] .job__role-date,
+[data-theme="dark"] .portfolio-menu nav ul li a {
+    color: var(--c-muted);
+}
+
+/* The sticky bar, once it turns solid on scroll */
+[data-theme="dark"] .menu.menu--active {
+    background-color: var(--c-surface);
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.45);
+}
+[data-theme="dark"] .menu.menu--active .menu__wrapper a {
+    color: var(--c-text) !important;
+}
+[data-theme="dark"] .menu.menu--active .menu__wrapper a:hover,
+[data-theme="dark"] .menu.menu--active .menu__mobile-button:hover {
+    color: var(--c-accent) !important;
+}
+[data-theme="dark"] .menu.menu--active .menu__wrapper a:after {
+    background: var(--c-accent) !important;
+}
+[data-theme="dark"] .menu.menu--active .menu__mobile-button {
+    color: var(--c-text) !important;
+}
+
+/* Resume and publications timeline */
+[data-theme="dark"] .resume-list .resume-list__block {
+    border-left-color: var(--c-accent);
+}
+[data-theme="dark"] .resume-list .resume-list__block:before {
+    border-color: var(--c-accent);
+    background-color: var(--c-bg);
+}
+[data-theme="dark"] .resume-list .resume-list__block-title {
+    color: var(--c-accent);
+}
+[data-theme="dark"] .job__role:before {
+    background-color: #4b3f74;
+}
+[data-theme="dark"] .job__role + .job__role:after {
+    background-color: var(--c-rule);
+}
+[data-theme="dark"] .job__total {
+    color: var(--c-accent);
+    background-color: var(--c-chip-strong);
+}
+[data-theme="dark"] .job__role-tag {
+    color: var(--c-muted);
+    border-color: var(--c-rule);
+}
+
+/* Skills and course subjects */
+[data-theme="dark"] .skill-group,
+[data-theme="dark"] .skill-group:last-of-type,
+[data-theme="dark"] .practice-item {
+    border-color: var(--c-rule-soft);
+}
+[data-theme="dark"] ul.skill-tags li {
+    color: var(--c-text);
+    background-color: var(--c-chip);
+}
+[data-theme="dark"] ul.skill-tags li:hover {
+    color: #ffffff;
+    background-color: var(--c-accent);
+}
+
+/* Project cards */
+[data-theme="dark"] .project-card .project-card__info {
+    border-color: var(--c-rule);
+}
+[data-theme="dark"] .project-card:hover {
+    box-shadow: 0 1px 31px rgba(0, 0, 0, 0.5);
+}
+[data-theme="dark"] .tags li {
+    color: var(--c-text);
+    background-color: var(--c-surface);
+    box-shadow: none;
+    border: 1px solid var(--c-rule);
+}
+[data-theme="dark"] .project-card__img {
+    background-color: var(--c-panel);
+}
+/* The drawings are light-on-light artwork. Inverting flips the lightness and
+   the hue rotation puts the purples back where they belong. */
+[data-theme="dark"] .project-card__img img[src$=".svg"] {
+    background-color: transparent;
+    filter: invert(1) hue-rotate(180deg) saturate(0.9) brightness(0.95);
+}
+
+/* Read more */
+[data-theme="dark"] .readmore.is-clamped:after {
+    background: linear-gradient(rgba(20, 18, 32, 0), var(--c-bg) 85%);
+}
+[data-theme="dark"] .readmore__toggle {
+    color: var(--c-accent);
+}
+
+/* Buttons keep the brand purple, which still reads on a dark page */
+[data-theme="dark"] .site-btn {
+    background-color: var(--c-accent);
+    color: #1b1626 !important;
+}
+[data-theme="dark"] .site-btn:focus,
+[data-theme="dark"] .site-btn:hover {
+    background-color: #b7a9f1;
+}
+
+/* ---------------------------------------------------------
+   Theme toggle button
+   --------------------------------------------------------- */
+.theme-toggle {
+    float: right;
+    background: none;
+    border: 0;
+    padding: 0;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    border-radius: 50%;
+    color: #ffffff;
+    opacity: 0.65;
+    cursor: pointer;
+    transition: opacity 0.3s, background-color 0.3s, color 0.3s;
+}
+.theme-toggle:hover,
+.theme-toggle:focus {
+    opacity: 1;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+.theme-toggle__icon {
+    font-size: 20px;
+    vertical-align: middle;
+}
+/* Once the bar turns solid it sits on a light surface, so the icon flips. */
+.menu--active .theme-toggle {
+    color: #555555;
+    opacity: 0.9;
+}
+.menu--active .theme-toggle:hover,
+.menu--active .theme-toggle:focus {
+    color: #6d56c1;
+    background-color: rgba(109, 86, 193, 0.1);
+}
+[data-theme="dark"] .menu--active .theme-toggle {
+    color: var(--c-text);
+}
+[data-theme="dark"] .menu--active .theme-toggle:hover,
+[data-theme="dark"] .menu--active .theme-toggle:focus {
+    color: var(--c-accent);
+    background-color: rgba(165, 148, 236, 0.16);
+}
+@media screen and (max-width: 991px) {
+    .theme-toggle {
+        margin-top: -4px;
+    }
+}
+
+
+/* ---------------------------------------------------------
+   Muted text, both themes
+   The template's greys (#999, and #a5a5a5 on the role dates)
+   fall below 4.5:1 on white. Routing them through the same
+   custom properties as dark mode fixes light and keeps the
+   two themes defined in one place.
+   --------------------------------------------------------- */
+.resume-list .resume-list_title,
+.resume-list .resume-list__block-date,
+.portfolio-menu nav ul li a,
+.skill-group__label,
+.practice-item__description,
+.job__range,
+.job__role-date,
+.job__role-tag {
+    color: var(--c-muted);
+}
+.job__role-tag {
+    border-color: var(--c-rule);
+}
+.job__role-text {
+    color: var(--c-text-soft);
 }
