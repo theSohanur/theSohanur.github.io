@@ -701,3 +701,55 @@ ul.edu-subjects li {
 .job__role-text {
     color: var(--c-text-soft);
 }
+
+
+/* ---------------------------------------------------------
+   The two gradient bands in dark mode
+   The template's gradient is built for a white page; against
+   a near-black one it lands as a bright slab. It keeps the
+   same indigo-to-plum journey here, just much deeper, so it
+   sits in the same family as the page.
+
+   The edge stays hard, matching light mode.
+   --------------------------------------------------------- */
+[data-theme="dark"] .main-header:before {
+    background: linear-gradient(
+        54deg,
+        rgba(38, 34, 78, 0.95) 34%,
+        rgba(72, 42, 64, 0.95)
+    );
+}
+
+[data-theme="dark"] .background:before {
+    background: linear-gradient(
+        54deg,
+        rgba(38, 34, 78, 0.95) 34%,
+        rgba(72, 42, 64, 0.95)
+    );
+}
+
+/* The header photo carries more of the band now that the overlay is darker,
+   so hold it back a little to keep the name legible. */
+[data-theme="dark"] .main-header {
+    background-color: #0f0d18;
+}
+[data-theme="dark"] .background {
+    background-color: #0f0d18;
+}
+
+
+/* The template de-emphasises these with opacity .4, which puts white text on
+   the gradient at about 2.7:1 — below AA in both themes. Just enough opacity
+   to clear 4.5:1 while still reading as secondary. */
+.contact-list.contact-list__opacity-titles dt {
+    opacity: 0.78;
+}
+.footer {
+    opacity: 0.78;
+}
+/* The dark band is deeper, so the same text clears AA with room to spare and
+   can stay more clearly secondary there. */
+[data-theme="dark"] .contact-list.contact-list__opacity-titles dt,
+[data-theme="dark"] .footer {
+    opacity: 0.68;
+}
