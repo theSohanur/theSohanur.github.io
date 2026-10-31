@@ -812,12 +812,21 @@ ul.edu-subjects li {
     }
 }
 
-/* Tablet portrait: still beside the text, just a little shorter. */
+/* Tablet portrait: still beside the text, but at this width the headline and
+   the role both wrap onto a second line, so the text column grows taller than
+   the portrait — the reverse of the desktop layout, which left the photo
+   stranded with a gap beneath it. Centring it against the column puts the
+   leftover space evenly above and below. */
 @media screen and (min-width: 768px) and (max-width: 990px) {
+    .personal-profile .personal-profile__avatar {
+        display: flex;
+        align-items: center;
+    }
     .personal-profile .personal-profile__avatar img {
         width: 100%;
-        height: 300px;
-        top: 20px;
+        height: 340px;
+        top: 0;
+        margin-top: 0;
     }
 }
 
