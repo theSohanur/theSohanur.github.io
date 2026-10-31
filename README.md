@@ -101,6 +101,13 @@ Google Fonts, with Font Awesome and Material Design Icons for the icons.
 - **Open it over http, not from disk.** The page fetches `site.json`, and
   browsers block that on `file://`. GitHub Pages is fine; locally use the
   command below. If the page comes up empty, this is why — the console says so.
+- **Bump `?v=` after changing any CSS or JS.** Pages serves assets with
+  `Cache-Control: max-age=600`, so a returning visitor can get the new
+  `index.html` with a stale stylesheet still cached — new markup, old rules,
+  broken layout. The `?v=1` on every `assets/css/*.css` and `assets/js/*.js`
+  reference in `index.html` and `404.html` prevents that: raise the number and
+  the browser treats it as a new file. Content in `site.json` needs no bump —
+  it is fetched with `cache: 'no-cache'` and is always current.
 - **A new section** needs its `<h2>` id added to the `animatedHeaders` list in
   `assets/js/section.js`, or the heading stays invisible. The typing animation
   blanks it until a scroll waypoint fires.
