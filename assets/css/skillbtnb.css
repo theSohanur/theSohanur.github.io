@@ -838,8 +838,31 @@ ul.edu-subjects li {
     .personal-profile {
         padding-top: 96px;
     }
+    /* Stacked, the portrait only fills the left of a full-width column. The
+       empty strip beside it becomes a terminal caret — the same idiom as the
+       "Hi_" and "Skills_" headings and their typing animation. */
     .personal-profile .personal-profile__avatar {
+        display: flex;
+        align-items: flex-end;
         margin-bottom: 26px;
+    }
+    .personal-profile .personal-profile__avatar img {
+        flex: none;
+    }
+    .personal-profile .personal-profile__avatar:after {
+        content: "";
+        flex: 1;
+        height: 5px;
+        margin-left: 22px;
+        margin-bottom: 22px;
+        background-image: radial-gradient(
+            circle,
+            rgba(255, 255, 255, 0.9) 2px,
+            transparent 2.2px
+        );
+        background-size: 13px 5px;
+        background-repeat: repeat-x;
+        animation: caret-dots 2.8s linear infinite;
     }
     /* Scales with the viewport, so a 744px iPad mini — where the columns
        have already stacked — gets a tablet-sized portrait rather than a
@@ -852,5 +875,37 @@ ul.edu-subjects li {
     }
     .personal-profile .personal-profile__name {
         margin-top: 0;
+    }
+}
+
+
+/* The dots type themselves out left to right. Revealing a dotted background
+   with a clip edge rather than stepping it means the dots appear one at a time
+   whatever the width of the gap, so it works from a 360px phone to a 744px
+   tablet without tuning. It holds full, fades, then runs again. */
+@keyframes caret-dots {
+    0% {
+        clip-path: inset(0 100% 0 0);
+        opacity: 0.95;
+    }
+    65% {
+        clip-path: inset(0 0 0 0);
+        opacity: 0.95;
+    }
+    88% {
+        clip-path: inset(0 0 0 0);
+        opacity: 0.95;
+    }
+    100% {
+        clip-path: inset(0 0 0 0);
+        opacity: 0;
+    }
+}
+
+/* Anyone who has asked for less motion gets the caret as a steady line. */
+@media (prefers-reduced-motion: reduce) {
+    .personal-profile .personal-profile__avatar:after {
+        animation: none;
+        opacity: 0.55;
     }
 }
