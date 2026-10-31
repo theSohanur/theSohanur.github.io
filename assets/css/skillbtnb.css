@@ -579,9 +579,12 @@ ul.edu-subjects li {
     color: var(--c-text);
     background-color: var(--c-chip);
 }
+/* Filling with the pale accent put white text at 2.6:1. On a dark page the
+   hover should lift the chip, not bleach it, so it deepens into purple and the
+   text goes to full white. */
 [data-theme="dark"] ul.skill-tags li:hover {
     color: #ffffff;
-    background-color: var(--c-accent);
+    background-color: #3b3168;
 }
 
 /* Project cards */
@@ -615,14 +618,16 @@ ul.edu-subjects li {
     color: var(--c-accent);
 }
 
-/* Buttons keep the brand purple, which still reads on a dark page */
+/* The button keeps the brand purple rather than inverting to a pale pill,
+   which looked washed out against the dark page. Lifted just enough that white
+   text still clears AA on it. */
 [data-theme="dark"] .site-btn {
-    background-color: var(--c-accent);
-    color: #1b1626 !important;
+    background-color: #6a54c9;
+    color: #ffffff !important;
 }
 [data-theme="dark"] .site-btn:focus,
 [data-theme="dark"] .site-btn:hover {
-    background-color: #b7a9f1;
+    background-color: #7862d4;
 }
 
 /* ---------------------------------------------------------
