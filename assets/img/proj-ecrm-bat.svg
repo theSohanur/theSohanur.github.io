@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="44 52.5 752 501" width="800" height="600" role="img" aria-label="Illustration of an eight-year-old database being rebuilt into a clean star schema">
+  <defs>
+    <marker id="bat-arrow" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M1 1l9 5-9 5z" fill="#6D56C1"/>
+    </marker>
+  </defs>
+
+  <rect x="-50" y="-50" width="900" height="700" fill="#F5F2FC"/>
+
+  <!-- ============ left: the legacy pile ============ -->
+  <g>
+    <!-- stacked, overlapping, slightly askew: eight years of accretion -->
+    <g transform="rotate(-6 152 300)">
+      <rect x="78" y="196" width="150" height="104" rx="9" fill="#FFFFFF" stroke="#DED8EF" stroke-width="2"/>
+      <rect x="78" y="196" width="150" height="22" rx="9" fill="#E7E2F4"/>
+      <rect x="78" y="207" width="150" height="11" fill="#E7E2F4"/>
+      <rect x="92" y="232" width="96" height="7" rx="3.5" fill="#E3DEF1"/>
+      <rect x="92" y="250" width="118" height="7" rx="3.5" fill="#E3DEF1"/>
+      <rect x="92" y="268" width="80" height="7" rx="3.5" fill="#E3DEF1"/>
+    </g>
+    <g transform="rotate(4 152 300)">
+      <rect x="92" y="236" width="150" height="104" rx="9" fill="#FFFFFF" stroke="#DED8EF" stroke-width="2"/>
+      <rect x="92" y="236" width="150" height="22" rx="9" fill="#E7E2F4"/>
+      <rect x="92" y="247" width="150" height="11" fill="#E7E2F4"/>
+      <rect x="106" y="272" width="110" height="7" rx="3.5" fill="#E3DEF1"/>
+      <rect x="106" y="290" width="74" height="7" rx="3.5" fill="#E3DEF1"/>
+      <rect x="106" y="308" width="96" height="7" rx="3.5" fill="#E3DEF1"/>
+    </g>
+    <g transform="rotate(-2 152 300)">
+      <rect x="84" y="286" width="150" height="104" rx="9" fill="#FFFFFF" stroke="#D3CBE9" stroke-width="2"/>
+      <rect x="84" y="286" width="150" height="22" rx="9" fill="#DCD5EE"/>
+      <rect x="84" y="297" width="150" height="11" fill="#DCD5EE"/>
+      <rect x="98" y="322" width="88" height="7" rx="3.5" fill="#DFD9EF"/>
+      <rect x="98" y="340" width="112" height="7" rx="3.5" fill="#DFD9EF"/>
+      <rect x="98" y="358" width="68" height="7" rx="3.5" fill="#DFD9EF"/>
+    </g>
+
+    <!-- tangled joins between them -->
+    <path d="M150 300c40 18 10 34 54 44" stroke="#C6BCE4" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M196 262c-46 26 -8 50 -62 62" stroke="#C6BCE4" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- ============ the rebuild ============ -->
+  <line x1="286" y1="300" x2="356" y2="300" stroke="#6D56C1" stroke-width="3" marker-end="url(#bat-arrow)" stroke-linecap="round"/>
+
+  <!-- ============ right: the star schema ============ -->
+  <g>
+    <!-- dimensions -->
+    <g>
+      <rect x="470" y="150" width="124" height="60" rx="9" fill="#FFFFFF" stroke="#C9BFF0" stroke-width="2"/>
+      <rect x="470" y="150" width="124" height="18" rx="9" fill="#EFEBFC"/>
+      <rect x="470" y="159" width="124" height="9" fill="#EFEBFC"/>
+      <rect x="484" y="180" width="70" height="7" rx="3.5" fill="#DCD5EE"/>
+      <rect x="484" y="194" width="52" height="7" rx="3.5" fill="#E9E5F6"/>
+    </g>
+    <g>
+      <rect x="648" y="268" width="124" height="60" rx="9" fill="#FFFFFF" stroke="#C9BFF0" stroke-width="2"/>
+      <rect x="648" y="268" width="124" height="18" rx="9" fill="#EFEBFC"/>
+      <rect x="648" y="277" width="124" height="9" fill="#EFEBFC"/>
+      <rect x="662" y="298" width="70" height="7" rx="3.5" fill="#DCD5EE"/>
+      <rect x="662" y="312" width="52" height="7" rx="3.5" fill="#E9E5F6"/>
+    </g>
+    <g>
+      <rect x="470" y="396" width="124" height="60" rx="9" fill="#FFFFFF" stroke="#C9BFF0" stroke-width="2"/>
+      <rect x="470" y="396" width="124" height="18" rx="9" fill="#EFEBFC"/>
+      <rect x="470" y="405" width="124" height="9" fill="#EFEBFC"/>
+      <rect x="484" y="426" width="70" height="7" rx="3.5" fill="#DCD5EE"/>
+      <rect x="484" y="440" width="52" height="7" rx="3.5" fill="#E9E5F6"/>
+    </g>
+    <g>
+      <rect x="378" y="268" width="104" height="60" rx="9" fill="#FFFFFF" stroke="#C9BFF0" stroke-width="2"/>
+      <rect x="378" y="268" width="104" height="18" rx="9" fill="#EFEBFC"/>
+      <rect x="378" y="277" width="104" height="9" fill="#EFEBFC"/>
+      <rect x="392" y="298" width="58" height="7" rx="3.5" fill="#DCD5EE"/>
+      <rect x="392" y="312" width="42" height="7" rx="3.5" fill="#E9E5F6"/>
+    </g>
+
+    <!-- clean joins into the fact table -->
+    <g stroke="#B3A7E0" stroke-width="2.5" fill="none">
+      <path d="M532 210v46"/>
+      <path d="M648 298h-44"/>
+      <path d="M532 396v-44"/>
+      <path d="M482 298h30"/>
+    </g>
+
+    <!-- fact table -->
+    <rect x="512" y="256" width="92" height="92" rx="12" fill="#6D56C1"/>
+    <rect x="528" y="278" width="60" height="8" rx="4" fill="#FFFFFF" opacity="0.95"/>
+    <rect x="528" y="296" width="44" height="7" rx="3.5" fill="#FFFFFF" opacity="0.6"/>
+    <rect x="528" y="312" width="52" height="7" rx="3.5" fill="#FFFFFF" opacity="0.6"/>
+  </g>
+</svg>

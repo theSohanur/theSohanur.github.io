@@ -48,6 +48,7 @@ var animatedHeaders = animateHeaders({
     "#resume_header": '70%',
     "#skill_header": '70%',
     "#portfolio_header": '70%',
+    "#publications_header": '70%',
     "#testimonials_header": '70%',
     "#blog_header": '70%',
     "#contacts_header": '70%',
