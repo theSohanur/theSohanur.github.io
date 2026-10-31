@@ -797,3 +797,51 @@ ul.edu-subjects li {
     border-radius: 3px;
     padding: 1px 6px;
 }
+
+
+/* ---------------------------------------------------------
+   Header portrait on small screens
+   The template hides the portrait entirely below 990px, which
+   takes it away on every tablet held in portrait and on every
+   phone. There is room for it — it only needed sizing for the
+   space it lands in.
+   --------------------------------------------------------- */
+@media screen and (max-width: 990px) {
+    .personal-profile .personal-profile__avatar {
+        display: block;
+    }
+}
+
+/* Tablet portrait: still beside the text, just a little shorter. */
+@media screen and (min-width: 768px) and (max-width: 990px) {
+    .personal-profile .personal-profile__avatar img {
+        width: 100%;
+        height: 300px;
+        top: 20px;
+    }
+}
+
+/* Phones: the columns stack, so the portrait sits above the name. Keep it
+   modest, and drop the 40px overhang that would otherwise push it into the
+   section below. */
+@media screen and (max-width: 767px) {
+    /* Clear the fixed menu bar, so the hamburger never sits on the portrait. */
+    .personal-profile {
+        padding-top: 96px;
+    }
+    .personal-profile .personal-profile__avatar {
+        margin-bottom: 26px;
+    }
+    /* Scales with the viewport, so a 744px iPad mini — where the columns
+       have already stacked — gets a tablet-sized portrait rather than a
+       phone-sized one. */
+    .personal-profile .personal-profile__avatar img {
+        width: clamp(150px, 24vw, 215px);
+        height: clamp(180px, 29vw, 255px);
+        top: 0;
+        margin-top: 0;
+    }
+    .personal-profile .personal-profile__name {
+        margin-top: 0;
+    }
+}
