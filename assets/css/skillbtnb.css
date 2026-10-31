@@ -758,3 +758,42 @@ ul.edu-subjects li {
 [data-theme="dark"] .footer {
     opacity: 0.68;
 }
+
+
+/* ---------------------------------------------------------
+   Content-load failure notice
+   Only ever appears when site.json could not be fetched —
+   almost always because index.html was opened from disk.
+   --------------------------------------------------------- */
+.load-failure {
+    border: 1px solid var(--c-accent);
+    border-left-width: 4px;
+    border-radius: 3px;
+    padding: 22px 26px;
+    margin-bottom: 30px;
+    background-color: var(--c-chip);
+    color: var(--c-text);
+    font-size: 16px;
+    line-height: 26px;
+}
+.load-failure p {
+    margin: 0 0 12px;
+}
+.load-failure p:last-child {
+    margin-bottom: 0;
+}
+.load-failure__title {
+    font-family: "Roboto Mono", monospace;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--c-accent);
+}
+.load-failure code {
+    font-family: Inconsolata, monospace;
+    font-size: 15px;
+    background-color: var(--c-chip-strong);
+    border-radius: 3px;
+    padding: 1px 6px;
+}

@@ -334,6 +334,32 @@
         document.dispatchEvent(new CustomEvent('site:rendered'));
     }
 
+    // Shown in the page itself when the content cannot be fetched. Opening the
+    // file straight off disk is the usual cause: browsers block fetch() on
+    // file:// for security, so the JSON never arrives and every section stays
+    // empty. A blank page gives no clue, so say what happened and what to do.
+    function showLoadFailure(err) {
+        var fromDisk = location.protocol === 'file:';
+        var host = el('hello-intro') || document.querySelector('main') || document.body;
+        var box = document.createElement('div');
+        box.className = 'load-failure';
+        box.innerHTML =
+            '<p class="load-failure__title">The page content could not be loaded.</p>' +
+            (fromDisk
+                ? '<p>This file was opened straight from disk, and browsers block a ' +
+                  'page on <code>file://</code> from reading another local file. ' +
+                  'All the content lives in <code>assets/data/site.json</code>, so ' +
+                  'nothing can be rendered.</p>' +
+                  '<p>Serve the folder over http instead — from this directory run' +
+                  '<br><code>python -m http.server 8000</code><br>' +
+                  'then open <code>http://localhost:8000</code>. In VS Code, the ' +
+                  'Live Server extension does the same thing.</p>'
+                : '<p><code>assets/data/site.json</code> did not load (' +
+                  esc(err && err.message ? err.message : String(err)) +
+                  '). Check that the file exists and is valid JSON.</p>');
+        host.insertBefore(box, host.firstChild);
+    }
+
     function boot() {
         // Independent of the data file, so the footer is right even if it fails.
         var year = el('footer-year');
@@ -351,6 +377,8 @@
                     console.error('Opening index.html from disk blocks the fetch. ' +
                                   'Run `python -m http.server` and use http://localhost:8000 instead.');
                 }
+                // Without this the page is simply blank, which gives no clue why.
+                showLoadFailure(err);
             });
     }
 
