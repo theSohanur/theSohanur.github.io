@@ -1,6 +1,5 @@
 {
   "_README": "Everything on the site comes from this file. Edit here, commit, done — no HTML to touch. Dates are YYYY-MM; use \"present\" for an end date that is still running, and durations work themselves out. Roles inside a company go newest first.",
-
   "profile": {
     "name": "Md Sohanur Rahman",
     "headline": "Senior Data Analyst & Team Lead | Technical Author & Trainer",
@@ -8,25 +7,48 @@
     "photo": "assets/img/profile_bw.jpg",
     "cv": "cv/Md Sohanur Rahman - Resume.pdf",
     "contacts": [
-      { "label": "Role", "value": "Team Lead, Data & Analytics at V2 Technologies" },
-      { "label": "Phone", "value": "+880 1737553058", "href": "tel:+8801737553058" },
-      { "label": "Email", "value": "sohanur.math@gmail.com", "href": "mailto:sohanur.math@gmail.com" },
-      { "label": "Address", "value": "Mirpur, Dhaka, Bangladesh." }
+      {
+        "label": "Role",
+        "value": "Team Lead, Data & Analytics at V2 Technologies"
+      },
+      {
+        "label": "Phone",
+        "value": "+880 1737553058",
+        "href": "tel:+8801737553058"
+      },
+      {
+        "label": "Email",
+        "value": "sohanur.math@gmail.com",
+        "href": "mailto:sohanur.math@gmail.com"
+      },
+      {
+        "label": "Address",
+        "value": "Mirpur, Dhaka, Bangladesh."
+      }
     ],
     "social": [
-      { "label": "GitHub", "icon": "fa-github", "url": "https://github.com/theSohanur/" },
-      { "label": "Linkedin", "icon": "fa-linkedin-square", "url": "https://www.linkedin.com/in/thesohanur/" },
-      { "label": "Facebook", "icon": "fa-facebook-square", "url": "https://www.facebook.com/sohanurss/" }
+      {
+        "label": "GitHub",
+        "icon": "fa-github",
+        "url": "https://github.com/theSohanur/"
+      },
+      {
+        "label": "Linkedin",
+        "icon": "fa-linkedin-square",
+        "url": "https://www.linkedin.com/in/thesohanur/"
+      },
+      {
+        "label": "Facebook",
+        "icon": "fa-facebook-square",
+        "url": "https://www.facebook.com/sohanurss/"
+      }
     ]
   },
-
   "hello": [
     "Hi, I am a Senior Data Analyst and Team Lead with <b><i>7+ years</i></b> across data analytics, business intelligence and data engineering. For the last three of them I have led the Data & Analytics team of seven at V2 Technologies. I work on the full path from raw data to decisions: designing databases and data warehouses, building ETL pipelines with dbt and Airflow on BigQuery and PostgreSQL, modeling the data — from forecasting and marketing mix models to machine learning — and delivering the Power BI, Tableau and Excel reporting that management actually uses.",
     "I currently lead data and analytics for <b>EveryAI</b>, an AI subscription app with 500K+ users, and the rebuild of <b>BAT Bangladesh's</b> 8-year-old e-CRM platform. Other clients include Grameenphone, Unilever Bangladesh, City Bank and Nagad. Alongside the client work I write and teach — I am the author of <i>Math for Programmers</i> and spent two years as a data analytics instructor. As a Mathematics graduate I lean on that background every day, and I am open to remote work and relocation."
   ],
-
   "resumeIntro": "I lead a team of seven analysts and engineers — planning and tracking work across client projects, reviewing SQL, models and dashboards, mentoring the juniors and reporting to management. Alongside the leadership I stay hands-on: building ETL/ELT pipelines, designing star-schema warehouse layers, tuning production PostgreSQL, controlling BigQuery cost, and running the analytics — segmentation, cohort and retention analysis, time-series forecasting, marketing mix modeling and predictive models deployed on AWS SageMaker. I gather requirements through stakeholder interviews, write the BRDs and technical specifications, and present results to leadership including international clients.",
-
   "employment": [
     {
       "company": "V2 Technologies Ltd.",
@@ -85,7 +107,6 @@
       ]
     }
   ],
-
   "education": [
     {
       "institution": "Institute of Business Administration (IBA), University of Dhaka",
@@ -125,150 +146,333 @@
       ]
     }
   ],
-
   "skills": [
     {
       "group": "data engineering",
-      "items": ["dbt", "Apache Airflow", "n8n", "Python", "pandas", "ETL / ELT", "CDC", "REST APIs", "CI/CD", "Docker", "Git", "Flask", "FastAPI"]
+      "items": [
+        "dbt",
+        "Apache Airflow",
+        "n8n",
+        "Python",
+        "pandas",
+        "ETL / ELT",
+        "CDC",
+        "REST APIs",
+        "CI/CD",
+        "Docker",
+        "Git",
+        "Flask",
+        "FastAPI"
+      ]
     },
     {
       "group": "warehousing & databases",
-      "items": ["BigQuery", "PostgreSQL", "MySQL", "Snowflake", "Redshift", "Star Schema", "Data Marts", "Stored Procedures", "Indexing", "Query Optimization"]
+      "items": [
+        "BigQuery",
+        "PostgreSQL",
+        "MySQL",
+        "Snowflake",
+        "Redshift",
+        "Star Schema",
+        "Data Marts",
+        "Stored Procedures",
+        "Indexing",
+        "Query Optimization"
+      ]
     },
     {
       "group": "bi & reporting",
-      "items": ["Power BI", "DAX", "Power Query", "Tableau", "Looker", "Excel", "VBA"]
+      "items": [
+        "Power BI",
+        "DAX",
+        "Power Query",
+        "Tableau",
+        "Looker",
+        "Excel",
+        "VBA"
+      ]
     },
     {
       "group": "analytics & statistics",
-      "items": ["Segmentation", "Cohort Analysis", "Retention", "Significance Testing", "Regression", "Time-series Forecasting", "Marketing Mix Modeling", "ROI Analysis"]
+      "items": [
+        "Segmentation",
+        "Cohort Analysis",
+        "Retention",
+        "Significance Testing",
+        "Regression",
+        "Time-series Forecasting",
+        "Marketing Mix Modeling",
+        "ROI Analysis"
+      ]
     },
     {
       "group": "machine learning & ai",
-      "items": ["scikit-learn", "statsmodels", "AWS SageMaker", "Anomaly Detection", "Entity Matching", "NetworkX", "Streamlit", "Claude", "MCP Servers"]
+      "items": [
+        "scikit-learn",
+        "statsmodels",
+        "AWS SageMaker",
+        "Anomaly Detection",
+        "Entity Matching",
+        "NetworkX",
+        "Streamlit",
+        "Claude",
+        "MCP Servers"
+      ]
     },
     {
       "group": "cloud",
-      "items": ["GCP", "BigQuery", "Dataflow", "Secret Manager", "AWS", "S3", "EC2", "Microsoft Azure"]
+      "items": [
+        "GCP",
+        "BigQuery",
+        "Dataflow",
+        "Secret Manager",
+        "AWS",
+        "S3",
+        "EC2",
+        "Microsoft Azure"
+      ]
     },
     {
       "group": "business & leadership",
-      "items": ["Team Leadership", "Stakeholder Management", "BRDs", "Technical Specifications", "Market Analysis", "Financial Analysis", "Project Management"]
+      "items": [
+        "Team Leadership",
+        "Stakeholder Management",
+        "BRDs",
+        "Technical Specifications",
+        "Market Analysis",
+        "Financial Analysis",
+        "Project Management"
+      ]
     }
   ],
-
   "projectsIntro": "Client work I have led or built at V2 Technologies. These run on production data, so the code and dashboards are not public — what follows is the problem, what I built and the stack. Happy to walk through any of them in detail.",
-
   "projectFilters": [
-    { "tag": "all", "label": "all" },
-    { "tag": "engineering", "label": "Data Engineering" },
-    { "tag": "bi", "label": "BI &amp; Reporting" },
-    { "tag": "analytics", "label": "Analytics &amp; ML" }
+    {
+      "tag": "all",
+      "label": "all"
+    },
+    {
+      "tag": "engineering",
+      "label": "Data Engineering"
+    },
+    {
+      "tag": "bi",
+      "label": "BI &amp; Reporting"
+    },
+    {
+      "tag": "analytics",
+      "label": "Analytics &amp; ML"
+    }
   ],
-
   "projects": [
     {
       "title": "EveryAI — AI Subscription App with 500K+ Users",
       "tag": "analytics",
       "image": "assets/img/proj-everyai.svg",
-      "text": "Data & Analytics Lead for a multi-model AI app whose users subscribe through telco partners Robi and Cirkle. I own the data work end to end — pipelines, customer segmentation, cohort and retention analysis, and customer and revenue forecasting for planning. Pack-wise revenue reporting runs fully automated in SQL and scheduled Python, down to the generated charts and the emails they arrive in.",
-      "stack": ["BigQuery", "dbt", "Python", "SQL", "Forecasting"],
-      "link": { "url": "https://everyai.app", "label": "Visit everyai.app" }
+      "text": "Data &amp; Analytics Lead for a multi-model AI app whose users subscribe through telco partners Robi and Cirkle. I own the data work end to end — pipelines, customer segmentation, cohort and retention analysis, and customer and revenue forecasting for planning. The stack routes between models with LiteLLM and keeps embeddings in pgvector for semantic search. Pack-wise revenue reporting runs fully automated in SQL and scheduled Python, down to the generated charts and the emails they arrive in.",
+      "stack": [
+        "Python",
+        "SQL",
+        "PostgreSQL",
+        "pgvector",
+        "Vector Database",
+        "LiteLLM",
+        "dbt",
+        "Airflow",
+        "Streamlit",
+        "Forecasting",
+        "Excel Automation",
+        "Azure"
+      ],
+      "link": {
+        "url": "https://everyai.app",
+        "label": "Visit everyai.app"
+      }
     },
     {
       "title": "e-CRM Platform — British American Tobacco Bangladesh",
       "tag": "bi",
       "image": "assets/img/proj-ecrm-bat.svg",
       "text": "Five years on the platform, from analyst to project lead. I am now leading the rebuild of a system that has been running for eight years — redesigning the database and data model to cut running cost and make the pipelines automation-friendly, while keeping data integrity intact through the change. Earlier I was the platform's analyst, working through sales and customer data and building the dashboards used for KPI tracking and customer targeting.",
-      "stack": ["PostgreSQL", "BigQuery", "Power Bi", "Tableau", "Data Modelling"]
+      "stack": [
+        "PostgreSQL",
+        "BigQuery",
+        "Data Warehousing",
+        "dbt",
+        "Airflow",
+        "ETL",
+        "Pipelining",
+        "Python",
+        "pandas",
+        "Power BI",
+        "Google Data Studio",
+        "Advanced Excel",
+        "GCP",
+        "AWS",
+        "RDS",
+        "EC2",
+        "SageMaker"
+      ]
     },
     {
       "title": "e-CRM — Grameenphone Field Operations",
       "tag": "engineering",
       "image": "assets/img/proj-grameenphone.svg",
       "text": "Designed the data architecture, the BigQuery ETL and the real-time reporting on field market visits and POSM inventory. A Python anomaly detection job flags suspicious field visits into audit tables, delivered to the business as a month-to-date Excel report.",
-      "stack": ["BigQuery", "Python", "Anomaly Detection", "Excel"]
+      "stack": [
+        "Python",
+        "SQL",
+        "PostgreSQL",
+        "Anomaly Detection",
+        "Geo Analysis",
+        "Flask",
+        "Report Automation",
+        "Excel"
+      ]
     },
     {
       "title": "Gamified Recruitment Platform (SaaS)",
       "tag": "engineering",
       "image": "assets/img/proj-recruitment.svg",
       "text": "Built the data architecture and assessment analytics end to end for our own hiring product, onboarded clients including City Bank and Nagad, and now guide the junior analysts who run it.",
-      "stack": ["Data Architecture", "PostgreSQL", "SQL", "Python"]
+      "stack": [
+        "Data Architecture",
+        "PostgreSQL",
+        "SQL",
+        "Python"
+      ]
     },
     {
       "title": "Univision — Unilever Bangladesh",
       "tag": "bi",
       "image": "assets/img/proj-univision.svg",
       "text": "Project lead for two years on the data and analytics work, coordinating between the client and our internal teams, and delivering the reporting their commercial teams work from.",
-      "stack": ["Power Bi", "SQL", "Excel"]
+      "stack": [
+        "SQL",
+        "Python",
+        "Power BI",
+        "Excel",
+        "ETL",
+        "Pipelining",
+        "Automated Reporting",
+        "Azure"
+      ]
     }
   ],
-
   "practiceIntro": "Self-study projects on public datasets, from earlier in my career. The client work above is the real measure — these are here because the source code is public and you can read it.",
-
   "practice": [
     {
       "title": "School Data Analysis with Power BI",
       "text": "Data modelling, cleaning and a dashboard over an open education dataset — enrolment by sector, state and year.",
       "links": [
-        { "url": "https://github.com/theSohanur/DataAnalysis_With_PowerBi/tree/master/School-Data-Analysis", "label": "Source on GitHub" },
-        { "url": "https://www.youtube.com/watch?v=N1hFhr6EfFQ", "label": "Watch walkthrough" }
+        {
+          "url": "https://github.com/theSohanur/DataAnalysis_With_PowerBi/tree/master/School-Data-Analysis",
+          "label": "Source on GitHub"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=N1hFhr6EfFQ",
+          "label": "Watch walkthrough"
+        }
       ]
     },
     {
       "title": "Sales and Budget Analysis with Power BI",
       "text": "Budget versus actual variance reporting by category and month, built as a practice run at commercial reporting.",
       "links": [
-        { "url": "https://github.com/theSohanur/DataAnalysis_With_PowerBi/tree/master/Budget-Sales-Analysis", "label": "Source on GitHub" },
-        { "url": "https://www.youtube.com/watch?v=4Dwu9lMkEvo", "label": "Watch walkthrough" }
+        {
+          "url": "https://github.com/theSohanur/DataAnalysis_With_PowerBi/tree/master/Budget-Sales-Analysis",
+          "label": "Source on GitHub"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=4Dwu9lMkEvo",
+          "label": "Watch walkthrough"
+        }
       ]
     },
     {
       "title": "Fuel Economy Data Analysis with Python",
       "text": "Cleaning, exploration and visualisation of EPA fuel economy data in pandas, NumPy, Matplotlib and Seaborn.",
       "links": [
-        { "url": "https://github.com/theSohanur/DataAnalysisWithPython/tree/master/Fuel-Economy-Data", "label": "Source on GitHub" },
-        { "url": "https://www.youtube.com/watch?v=rFVoRsZf5v0", "label": "Watch walkthrough" }
+        {
+          "url": "https://github.com/theSohanur/DataAnalysisWithPython/tree/master/Fuel-Economy-Data",
+          "label": "Source on GitHub"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=rFVoRsZf5v0",
+          "label": "Watch walkthrough"
+        }
       ]
     },
     {
       "title": "TV Halftime Shows and the Big Game — Python",
       "text": "An exploratory analysis of Super Bowl viewership, halftime performers and ad costs, written up as a notebook.",
       "links": [
-        { "url": "https://github.com/theSohanur/DataAnalysisWithPython/tree/master/Analyzing-TV-Data", "label": "Source on GitHub" },
-        { "url": "https://www.youtube.com/watch?v=AaM-VQ22PNo", "label": "Watch walkthrough" }
+        {
+          "url": "https://github.com/theSohanur/DataAnalysisWithPython/tree/master/Analyzing-TV-Data",
+          "label": "Source on GitHub"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=AaM-VQ22PNo",
+          "label": "Watch walkthrough"
+        }
       ]
     }
   ],
-
   "publicationsIntro": "Alongside client work I write and teach. Below are the book, the research paper and the certifications I have published or earned.",
-
   "publications": [
     {
       "title": "Math for Programmers (Book)",
       "meta": "Adommo Prokash, 2026 — 256 pages — ISBN 978-984-294-984-5",
       "text": "A Bangla-English guide to the math behind programming, from logic and algorithms to database optimization and data engineering. Written as Sohanur Rahman Khan.",
-      "link": { "url": "https://www.rokomari.com/book/553884", "label": "Find it on Rokomari" }
+      "link": {
+        "url": "https://www.rokomari.com/book/553884",
+        "label": "Find it on Rokomari"
+      }
     },
     {
       "title": "Deep Learning-Based Real-Time Bengali Multi-Vehicle Number Plate Detection",
       "meta": "ACM — Peer-reviewed paper",
       "text": "YOLOv8 with OCR, trained on a custom dataset of more than 1,080 images, reaching 97.8% accuracy.",
-      "link": { "url": "https://doi.org/10.1145/3723178.3723293", "label": "doi.org/10.1145/3723178.3723293" }
+      "link": {
+        "url": "https://doi.org/10.1145/3723178.3723293",
+        "label": "doi.org/10.1145/3723178.3723293"
+      }
     }
   ],
-
   "certifications": [
-    { "title": "Data Analyst Associate — DataCamp", "meta": "Jun 2025 — Credential ID DAA0010139808122" },
-    { "title": "Data Engineer Associate — DataCamp", "meta": "Jun 2025 — Credential ID DEA0011387788288" },
-    { "title": "Data Scientist Associate — DataCamp", "meta": "Aug 2025 — Credential ID DSA0016612864739" }
+    {
+      "title": "Data Analyst Associate — DataCamp",
+      "meta": "Jun 2025 — Credential ID DAA0010139808122"
+    },
+    {
+      "title": "Data Engineer Associate — DataCamp",
+      "meta": "Jun 2025 — Credential ID DEA0011387788288"
+    },
+    {
+      "title": "Data Scientist Associate — DataCamp",
+      "meta": "Aug 2025 — Credential ID DSA0016612864739"
+    }
   ],
-
   "contact": [
-    { "label": "Phone", "value": "+88 017 3755 3058", "href": "tel:+8801737553058" },
-    { "label": "LinkedIn", "value": "in/thesohanur", "href": "https://www.linkedin.com/in/thesohanur/" },
-    { "label": "Email", "value": "sohanur.math@gmail.com", "href": "mailto:sohanur.math@gmail.com" },
-    { "label": "Address", "value": "Mirpur, Dhaka, Bangladesh.", "href": "#" }
+    {
+      "label": "Phone",
+      "value": "+880 1737553058",
+      "href": "tel:+8801737553058"
+    },
+    {
+      "label": "LinkedIn",
+      "value": "in/thesohanur",
+      "href": "https://www.linkedin.com/in/thesohanur/"
+    },
+    {
+      "label": "Email",
+      "value": "sohanur.math@gmail.com",
+      "href": "mailto:sohanur.math@gmail.com"
+    },
+    {
+      "label": "Address",
+      "value": "Mirpur, Dhaka, Bangladesh.",
+      "href": "#"
+    }
   ]
 }

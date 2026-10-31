@@ -234,6 +234,82 @@
         }));
     }
 
+    // ---- links ------------------------------------------------------------
+    // Anything pointing off this site opens in its own tab, so a visitor never
+    // loses the page. Same-site anchors, mail and phone links are left alone.
+    function openExternalLinksInNewTab() {
+        var links = document.querySelectorAll('a[href]');
+        Array.prototype.forEach.call(links, function (a) {
+            var href = a.getAttribute('href') || '';
+            if (!/^https?:\/\//i.test(href)) return;      // #anchor, mailto:, tel:, relative
+            if (a.hostname === window.location.hostname) return;
+            a.setAttribute('target', '_blank');
+            a.setAttribute('rel', 'noopener noreferrer');
+        });
+    }
+
+    // ---- read more --------------------------------------------------------
+    // The intro paragraphs run long on a phone and push the rest of the page
+    // down, so on narrow screens they collapse behind a toggle.
+    var CLAMP_AT = 767;
+
+    function setupReadMore(ids) {
+        ids.forEach(function (id) {
+            var node = el(id);
+            if (!node || node.getAttribute('data-readmore')) return;
+            node.setAttribute('data-readmore', 'true');
+            node.classList.add('readmore');
+
+            var btn = document.createElement('button');
+            btn.type = 'button';
+            btn.className = 'readmore__toggle';
+            btn.setAttribute('aria-controls', id);
+            node.parentNode.insertBefore(btn, node.nextSibling);
+
+            function collapse() {
+                node.classList.add('is-clamped');
+                btn.textContent = 'Show more';
+                btn.setAttribute('aria-expanded', 'false');
+            }
+            function expand() {
+                node.classList.remove('is-clamped');
+                btn.textContent = 'Show less';
+                btn.setAttribute('aria-expanded', 'true');
+            }
+            btn.addEventListener('click', function () {
+                if (node.classList.contains('is-clamped')) expand();
+                else collapse();
+            });
+
+            function apply() {
+                if (window.innerWidth > CLAMP_AT) {
+                    node.classList.remove('is-clamped');
+                    btn.style.display = 'none';
+                    return;
+                }
+                // Only worth a toggle if the text actually overflows the clamp.
+                node.classList.remove('is-clamped');
+                var full = node.scrollHeight;
+                node.classList.add('is-clamped');
+                var clamped = node.clientHeight;
+                if (full > clamped + 8) {
+                    btn.style.display = '';
+                    collapse();
+                } else {
+                    node.classList.remove('is-clamped');
+                    btn.style.display = 'none';
+                }
+            }
+
+            apply();
+            var timer;
+            window.addEventListener('resize', function () {
+                clearTimeout(timer);
+                timer = setTimeout(apply, 150);
+            });
+        });
+    }
+
     function render(data) {
         renderProfile(data.profile);
 
@@ -250,6 +326,9 @@
         renderEntries('publications-list', data.publications);
         renderEntries('certifications-list', data.certifications);
         renderContact(data.contact, (data.profile || {}).social);
+
+        openExternalLinksInNewTab();
+        setupReadMore(['hello-intro', 'resume-intro']);
 
         // Let anything waiting on real content run now that it exists.
         document.dispatchEvent(new CustomEvent('site:rendered'));

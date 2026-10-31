@@ -382,3 +382,68 @@ ul.edu-subjects li {
     overflow-wrap: break-word;
     word-break: break-word;
 }
+
+
+/* ---------------------------------------------------------
+   Read more
+   The Hi_ and Resume_ intros are several paragraphs, which on
+   a phone pushes everything else off the screen. Below the
+   tablet breakpoint they collapse behind a toggle.
+   --------------------------------------------------------- */
+.readmore__toggle {
+    display: none;
+}
+
+@media screen and (max-width: 767px) {
+    .readmore {
+        position: relative;
+    }
+    .readmore.is-clamped {
+        max-height: 11.5em;
+        overflow: hidden;
+    }
+    /* Fade the cut edge so it reads as "there is more", not a hard crop. */
+    .readmore.is-clamped:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 3.2em;
+        background: linear-gradient(rgba(255, 255, 255, 0), #fff 85%);
+        pointer-events: none;
+    }
+
+    .readmore__toggle {
+        /* Block, so it never shares a line with the Download CV button. */
+        display: block;
+        width: auto;
+        text-align: left;
+        background: none;
+        border: 0;
+        padding: 0;
+        margin-top: 16px;
+        margin-bottom: 26px;
+        font-family: "Roboto Mono", monospace;
+        font-size: 13px;
+        line-height: 20px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: #6d56c1;
+        cursor: pointer;
+    }
+    .readmore__toggle:after {
+        content: " \25be";          /* small caret, flips when expanded */
+        display: inline-block;
+        margin-left: 6px;
+    }
+    .readmore__toggle[aria-expanded="true"]:after {
+        content: " \25b4";
+    }
+    .readmore__toggle:hover,
+    .readmore__toggle:focus {
+        text-decoration: underline;
+        outline: none;
+    }
+}
